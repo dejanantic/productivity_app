@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
     <title>Productivity App</title>
 </head>
 
@@ -27,12 +28,12 @@
 
         <!-- Big ass timer goes here -->
         <div class="timer">
-            <div class="time">
-                <p class="time">45:00</p>
-            </div>
             <div class="controls">
-                <!-- tk play/pause/restart -->
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset" onclick="reset()">Reset</button>
             </div>
+            <p class="display">Press start to begin</p>
         </div>
 
         <!-- Distraction bucket -->
@@ -48,9 +49,11 @@
     </main>
 
     <footer>
-        <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus.</div>
-        <div class="copryight">Dejan Antic &copy; 2019</div>
+        <div class="copryight">TK Site Title &copy; 2019</div>
+        <div class="about">Made with &hearts; in Oslo</div>
     </footer>
+    <script src="./timer.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
