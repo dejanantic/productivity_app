@@ -12,3 +12,4 @@ Some text tk
 - navigation
 - write the article on how the method works
 - hide the buttons when needed (hide play when you press play)
+- add a lightbox for feedback
