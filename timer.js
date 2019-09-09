@@ -38,6 +38,12 @@ function timer() {
             return;
         }
 
+        // Play sound if one third has gone by
+        if ((duration % 900 === 0) && (duration !== startValue) && (duration !== 0)) {
+            let sound = new Audio('./media/glass_ping.mp3');
+            sound.play();
+        }
+
         minutes = parseInt(duration / 60, 10);
         seconds = parseInt(duration % 60, 10);
 
@@ -52,6 +58,8 @@ function timer() {
             clearInterval(interval);
             display.dataset.timerStatus = 'finished';
             display.innerText = 'Session done! Take 5 :)'
+            let sound = new Audio('./media/beepbeep.mp3');
+            sound.play();
         }
     }, 1000)
 }
