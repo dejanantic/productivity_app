@@ -6,7 +6,7 @@ Some text tk
 
 - everything :)
 - add sound when the timer finishes and every 15 minutes
-  ~~- add the distruction bucket function~~
+- ~~add the distruction bucket function~~
 - add function for the local storage to save the distraction bucket items and the progress (how much you did per day)
 - fix style (focus mostly on typography)
 - navigation
