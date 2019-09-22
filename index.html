@@ -27,22 +27,23 @@
     <main role="main">
 
         <!-- Big ass timer goes here -->
-        <div class="timer">
-            <div class="controls">
+        <div class="timer" data-status="ready">
+            <div class=" controls">
                 <button id="start">Start</button>
-                <button id="pause">Pause</button>
-                <button id="reset"">Reset</button>
+                <!-- <button id="resume" hidden>Resume</button> -->
+                <button id="pause" hidden>Pause</button>
+                <button id="reset" hidden>Reset</button>
             </div>
             <p class=" display">Press start to begin</p>
-            </div>
+        </div>
 
-            <!-- Distraction bucket -->
-            <div class="distraction-bucket">
-                <input class="user-input" type="text" aria-label="user-input" placeholder="E.g. Check book on Amazon">
-                <ul class="bucket-list">
-                    <!-- Bucket items go here -->
-                </ul>
-            </div>
+        <!-- Distraction bucket -->
+        <div class="distraction-bucket">
+            <input class="user-input" type="text" aria-label="user-input" placeholder="E.g. Check book on Amazon">
+            <ul class="bucket-list">
+                <!-- Bucket items go here -->
+            </ul>
+        </div>
 
     </main>
 
