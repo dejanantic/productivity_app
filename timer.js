@@ -37,7 +37,7 @@
         pauseBtn.hidden = !pauseBtn.hidden;
     }
 
-    let timer = function countdownTimer() {
+    let startTimer = function countdown() {
 
     }
 
