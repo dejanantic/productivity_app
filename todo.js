@@ -1,21 +1,42 @@
-const distractionBucket = document.querySelector('.distraction-bucket');
+(function () {
 
-distractionBucket.addEventListener('keyup', function addItem(e) {
-    if (e.keyCode !== 13) return;
-    const input = document.querySelector('.user-input');
-    let text = input.value.trim();
-    appendItem(text);
-    input.value = '';
-    console.log(text);
-})
+    const form = document.querySelector('form');
+    const ul = document.querySelector('.bucket-list');
+    const input = document.querySelector('#item');
+    const button = document.querySelector('.clear');
+    const itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
-distractionBucket.addEventListener('click', function removeItem(e) {
-    if (!(e.target.classList.contains('remove'))) return;
-    let li = e.target.closest('li');
-    li.remove();
-})
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    const data = JSON.parse(localStorage.getItem('items'));
 
-function appendItem(text) {
-    const bucketList = document.querySelector('.bucket-list');
-    bucketList.insertAdjacentHTML('beforeend', `<li>${text}<button class="remove">&times;</button></li>`);
-}
+    const liMaker = text => {
+        let li = document.createElement('li');
+        li.textContent = text;
+        ul.appendChild(li);
+    }
+
+    data.forEach(item => {
+        liMaker(item);
+    });
+
+    form.addEventListener('submit', function addItem(e) {
+        e.preventDefault();
+
+        let text = input.value;
+        console.log(text);
+        liMaker(text);
+        itemsArray.push(text);
+        localStorage.setItem('items', JSON.stringify(itemsArray));
+        input.value = '';
+    })
+
+    button.addEventListener('click', function clearDistractionBucket() {
+        itemsArray.length = 0;
+        localStorage.clear();
+        while (ul.firstChild) ul.removeChild(ul.firstChild);
+    })
+
+
+
+
+})()
