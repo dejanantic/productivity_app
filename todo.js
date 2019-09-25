@@ -11,8 +11,22 @@
 
     const liMaker = text => {
         let li = document.createElement('li');
+        let button = document.createElement('button');
+        button.className = 'remove-button';
+        button.innerHTML = '&times;'
         li.textContent = text;
+        li.appendChild(button);
         ul.appendChild(li);
+    }
+
+    const removeArrItem = function removeItemFromArray(element) {
+        let item = element.firstChild.nodeValue;
+        let itemIndex = itemsArray.indexOf(item);
+        itemsArray.splice(itemIndex, 1);
+    }
+
+    const toggleVisibility = function toggleRemoveAllButtonVisibility() {
+        button.hidden = !button.hidden;
     }
 
     data.forEach(item => {
@@ -34,6 +48,14 @@
         itemsArray.length = 0;
         localStorage.clear();
         while (ul.firstChild) ul.removeChild(ul.firstChild);
+    })
+
+    ul.addEventListener('click', function removeItem(e) {
+        if (e.target.className !== 'remove-button') return;
+        let item = e.target.closest('li');
+        removeArrItem(item);
+        item.remove();
+        localStorage.setItem('items', JSON.stringify(itemsArray));
     })
 
 
