@@ -25,29 +25,33 @@
         itemsArray.splice(itemIndex, 1);
     }
 
-    const toggleVisibility = function toggleRemoveAllButtonVisibility() {
-        button.hidden = !button.hidden;
-    }
-
     data.forEach(item => {
         liMaker(item);
     });
+
+    window.addEventListener('DOMContentLoaded', function showClearAllButton() {
+        // If there are items stored in localStorage, show the 'Clear All' button when page has finished loading
+        if (ul.firstElementChild) button.hidden = !button.hidden;
+    })
 
     form.addEventListener('submit', function addItem(e) {
         e.preventDefault();
 
         let text = input.value;
+        if (!text) return;
         console.log(text);
         liMaker(text);
         itemsArray.push(text);
         localStorage.setItem('items', JSON.stringify(itemsArray));
         input.value = '';
+        if (button.hidden) button.hidden = !button.hidden;
     })
 
     button.addEventListener('click', function clearDistractionBucket() {
         itemsArray.length = 0;
         localStorage.clear();
         while (ul.firstChild) ul.removeChild(ul.firstChild);
+        button.hidden = true;
     })
 
     ul.addEventListener('click', function removeItem(e) {
@@ -56,6 +60,7 @@
         removeArrItem(item);
         item.remove();
         localStorage.setItem('items', JSON.stringify(itemsArray));
+        if (!ul.firstElementChild) button.hidden = true;
     })
 
 

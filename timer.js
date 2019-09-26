@@ -11,7 +11,8 @@
 
     timer.addEventListener('click', function listenForClicks(e) {
         if (e.target.tagName !== 'BUTTON') return;
-        let buttons = document.querySelectorAll('button');
+        let buttons = document.querySelectorAll('button.ctrl-btn');
+        console.log(buttons);
         switch (e.target.id) {
             case 'start':
                 timer.dataset.status = 'active';
