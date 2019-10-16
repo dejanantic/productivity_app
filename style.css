@@ -9,5 +9,67 @@ html {
 }
 
 .display {
-  font-size: 3em;
+  font-size: 84px;
+}
+
+.page-header {
+  background: salmon;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Timer Stuff */
+
+.controls {
+  display: flex;
+  flex-flow: column;
+  width: 200px;
+}
+
+.ctrl-btn {
+  min-height: 100px;
+  border: none;
+  font-size: 1.5em;
+}
+
+#start {
+  background: greenyellow;
+}
+
+#reset {
+  background: aquamarine;
+}
+
+#pause {
+  background: orange;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 0;
+}
+
+/* Distraction bucket */
+
+.distraction-bucket {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.user-input {
+  height: 70px;
+  min-width: 400px;
+  font-size: 14pt;
+}
+
+/* Footer stuff */
+
+.footer {
+  background: #575757;
+  color: #eee;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100px;
 }
