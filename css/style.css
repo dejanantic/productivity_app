@@ -9,12 +9,11 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  background: #ff8c69; }
+  box-sizing: border-box; }
 
 body {
   font-size: 1.6rem; }
 
-.site-title {
+.logo-text {
   text-transform: uppercase;
   font-size: 5rem; }
