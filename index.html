@@ -10,53 +10,56 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <!-- Site title & navigation-->
-    <header class="page-header">
-        <div class="logo">
-            <h1 class="logo__logo-text">Productivity App</h1>
-        </div>
-        <nav class="navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Method</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Get in touch</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Main website content -->
-    <main role="main">
-
-        <!-- Big ass timer goes here -->
-        <div class="timer" data-status="ready">
-            <p class="display">Press start to begin</p>
-            <div class="controls">
-                <button class="ctrl-btn" id="start">Start</button>
-                <button class="ctrl-btn" id="pause" hidden>Pause</button>
-                <button class="ctrl-btn" id="reset" hidden>Reset</button>
+        <!-- Site title & navigation-->
+        <header class="page-header">
+            <div class="logo">
+                <h1 class="logo__logo-text">Productivity App</h1>
             </div>
-        </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Method</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Get in touch</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <!-- Distraction bucket -->
-        <section class="distraction-bucket">
-            <h2>Distraction Bucket</h2>
-            <form>
-                <input class="user-input" id="item" type="text" aria-label="user-input" placeholder="E.g. Check book on Amazon">
-            </form>
-            <ul class="bucket-list">
-                <!-- Bucket items go here -->
-            </ul>
+        <!-- Main website content -->
+        <main role="main">
 
-            <button class="clear" hidden>Clear All</button>
-        </section>
+            <!-- Big ass timer goes here -->
+            <div class="timer" data-status="ready">
+                <p class="display">Press start to begin</p>
+                <div class="controls">
+                    <button class="ctrl-btn" id="start">Start</button>
+                    <button class="ctrl-btn" id="pause" hidden>Pause</button>
+                    <button class="ctrl-btn" id="reset" hidden>Reset</button>
+                </div>
+            </div>
 
-    </main>
+            <!-- Distraction bucket -->
+            <section class="distraction-bucket">
+                <h2>Distraction Bucket</h2>
+                <form>
+                    <input class="user-input" id="item" type="text" aria-label="user-input" placeholder="E.g. Check book on Amazon">
+                </form>
+                <ul class="bucket-list">
+                    <!-- Bucket items go here -->
+                </ul>
 
-    <footer class="footer">
-        <div class="copryight">TK Site Title &copy; 2019</div>
-        <div class="about">Made with &hearts; in Oslo</div>
-    </footer>
+                <button class="clear" hidden>Clear All</button>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="copryight">TK Site Title &copy; 2019</div>
+            <div class="about">Made with &hearts; in Oslo</div>
+        </footer>
+    </div>
     <script src="./timer.js"></script>
     <script src="./todo.js"></script>
 </body>

@@ -1,19 +1,22 @@
+/* BASE STUFF */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
+  box-sizing: inherit;
+}
+
+/* RESET */
+
+* {
   padding: 0;
   margin: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  box-sizing: border-box; }
-
-body {
-  font-size: 1.6rem; }
-
-.logo-text {
-  text-transform: uppercase;
-  font-size: 5rem; }
+}
